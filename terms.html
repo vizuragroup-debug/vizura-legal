@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service - Vizura</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07050e;
+      --card-bg: rgba(20, 14, 38, 0.75);
+      --card-border: rgba(123, 97, 255, 0.22);
+      --accent: #7b61ff;
+      --accent-glow: rgba(123, 97, 255, 0.35);
+      --accent-amber: #ffb703;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      background-image: 
+        radial-gradient(circle at 85% 10%, rgba(123, 97, 255, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 15% 60%, rgba(255, 183, 3, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 50% 90%, rgba(123, 97, 255, 0.06) 0%, transparent 50%);
+      background-attachment: fixed;
+      color: var(--text);
+      line-height: 1.75;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    .nav-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(7, 5, 14, 0.75);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 16px 24px;
+    }
+    .nav-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.35rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+    .brand-glow {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 16px var(--accent);
+    }
+    .nav-links {
+      display: flex;
+      gap: 12px;
+    }
+    .nav-tab {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+    }
+    .nav-tab:hover {
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+    .nav-tab.active {
+      color: #fff;
+      background: rgba(123, 97, 255, 0.15);
+      border-color: rgba(123, 97, 255, 0.4);
+    }
+    .page-container {
+      max-width: 900px;
+      margin: 40px auto 80px;
+      padding: 0 24px;
+    }
+    .header-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 40px;
+      margin-bottom: 32px;
+      backdrop-filter: blur(16px);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+    }
+    .header-card::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent-amber);
+      background: rgba(255, 183, 3, 0.12);
+      border: 1px solid rgba(255, 183, 3, 0.3);
+      padding: 4px 12px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+    .meta-line {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .content-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 24px;
+      padding: 40px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+    .section {
+      margin-bottom: 36px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .section:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-num {
+      color: var(--accent-amber);
+      font-size: 1rem;
+      font-weight: 800;
+    }
+    h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      margin: 18px 0 8px;
+    }
+    p {
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      font-size: 0.98rem;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 14px 0;
+    }
+    li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 10px;
+      color: var(--text-muted);
+      font-size: 0.96rem;
+    }
+    li::before {
+      content: '▹';
+      position: absolute;
+      left: 4px;
+      color: var(--accent-amber);
+      font-weight: 700;
+    }
+    strong {
+      color: #fff;
+      font-weight: 600;
+    }
+    .alert-box {
+      background: rgba(123, 97, 255, 0.08);
+      border: 1px solid rgba(123, 97, 255, 0.35);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+    .alert-box.gold {
+      background: rgba(255, 183, 3, 0.08);
+      border-color: rgba(255, 183, 3, 0.35);
+    }
+    .alert-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.05rem;
+    }
+    .alert-box.gold .alert-title {
+      color: var(--accent-amber);
+    }
+    .contact-card {
+      background: linear-gradient(135deg, rgba(255, 183, 3, 0.12) 0%, rgba(20, 14, 38, 0.9) 100%);
+      border: 1px solid rgba(255, 183, 3, 0.35);
+      border-radius: 20px;
+      padding: 28px;
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    a {
+      color: #ffd166;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+    }
+    a:hover {
+      color: #fff;
+    }
+    .email-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 8px 16px;
+      border-radius: 12px;
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      width: fit-content;
+      margin-top: 6px;
+    }
+    .footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-bar">
+    <div class="nav-content">
+      <a href="#" class="brand">
+        <span class="brand-glow"></span>
+        VIZURA
+      </a>
+      <div class="nav-links">
+        <a href="privacy.html" class="nav-tab">Privacy Policy</a>
+        <a href="terms.html" class="nav-tab active">Terms of Service</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-container">
+
+    <div class="header-card">
+      <div class="badge">Legal Agreement</div>
+      <h1>Terms of Service</h1>
+      <div class="meta-line">
+        <span><strong>Effective Date:</strong> November 2026</span>
+        <span>•</span>
+        <span><strong>Contact:</strong> info@vizura.app</span>
+        <span>•</span>
+        <span><strong>Platform:</strong> iOS & Android (Apple & Google Play Store)</span>
+      </div>
+    </div>
+
+    <div class="content-card">
+
+      <section class="section">
+        <h2><span class="section-num">01</span> Acceptance of Terms</h2>
+        <p>These Terms of Service ("Terms") constitute a legally binding agreement between you and <strong>Vizura</strong> ("we", "us", or "our"). By downloading, installing, accessing, or using the Vizura mobile application, you agree to be bound by all of the terms, conditions, policies, and community guidelines set forth herein.</p>
+        <p><strong>If you do not agree to all of these Terms, you are explicitly prohibited from using Vizura and must uninstall the application immediately.</strong></p>
+      </section>
+
+      <section class="section">
+        <h2><span class="section-num">02</span> User Eligibility & Accounts</h2>
+        <p>You must be at least <strong>13 years old</strong> to register an account or use Vizura. By creating an account, you represent and warrant that you meet this minimum age requirement and possess the legal capacity to enter into these Terms.</p>
+        <p>You agree to provide accurate, current, and complete registration information and maintain the security of your authentication credentials. You are solely responsible for all activities and transactions conducted under your account.</p>
+      </section>
+
+      <!-- EXPLICIT ACCOUNT DELETION PROVISION -->
+      <section class="section">
+        <h2><span class="section-num">03</span> Account Deletion & Termination by User</h2>
+        <div class="alert-box gold">
+          <div class="alert-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+            Right to Delete Account at Any Time
+          </div>
+          <p style="color: #cbd5e1; margin-bottom: 0;">You maintain the absolute right to delete your account and terminate your relationship with Vizura at any time, directly through self-service options in the app or via email.</p>
+        </div>
+        <ul>
+          <li><strong>In-App Deletion:</strong> You can delete your account directly inside the app by heading to <strong>Profile $\rightarrow$ Settings $\rightarrow$ Account & Security $\rightarrow$ Delete Account</strong>.</li>
+          <li><strong>Email Request:</strong> You may also request irrevocable account deletion by emailing our legal team at <a href="mailto:info@vizura.app"><strong>info@vizura.app</strong></a> from the email associated with your account.</li>
+          <li><strong>Effect of Deletion:</strong> Upon deletion, your profile, authentication records, personal data, and public submissions will be permanently wiped from our systems in accordance with our Privacy Policy. Virtual currency balances remaining in deleted accounts are forfeit and non-refundable.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2><span class="section-num">04</span> User Content & Intellectual Property License</h2>
+        <p>You retain full copyright and intellectual property ownership of any creative works, images, vibes, music clips, comments, or other materials you submit to Vizura ("User Content").</p>
+        <p>By posting User Content on Vizura, you grant us a worldwide, non-exclusive, royalty-free, transferable license (with the right to sub-license) to host, store, display, adapt, and distribute your content across our services solely for the purpose of operating, developing, and promoting the platform.</p>
+        <p>You represent and warrant that you possess all necessary rights and releases to publish your User Content and that your submissions do not infringe upon any third-party copyright, trademark, privacy, or intellectual property rights.</p>
+      </section>
+
+      <!-- VIRTUAL CURRENCY (VIZURA COINS) -->
+      <section class="section">
+        <h2><span class="section-num">05</span> Virtual Currency & Digital Perks (Vizura Coins)</h2>
+        <div class="alert-box gold">
+          <div class="alert-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v12M8 10h8M8 14h6"/></svg>
+            Virtual Currency Disclaimer
+          </div>
+          <p style="color: #cbd5e1; margin-bottom: 0;">Vizura Coins are limited, non-transferable, revocable digital licenses intended solely for entertainment and digital customization within the app. They do not constitute real currency, property, or investments.</p>
+        </div>
+        <ul>
+          <li><strong>No Monetary Value:</strong> Vizura Coins have zero real-world cash value, cannot be redeemed for legal tender, cannot earn interest, and cannot be exchanged for monetary value of any kind.</li>
+          <li><strong>Non-Transferable:</strong> Vizura Coins cannot be sold, bartered, gifted, or transferred outside of official in-app features. Any unauthorized third-party trading is strictly prohibited and constitutes grounds for immediate account termination.</li>
+          <li><strong>Non-Refundable:</strong> Purchases of virtual coin packs are final and non-refundable, except as required by applicable statutory consumer protection law or store platform terms.</li>
+          <li><strong>Earned Currency:</strong> Users may also earn complimentary Vizura Coins by maintaining consecutive daily login streaks or choosing to watch optional third-party rewarded video clips (capped daily).</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2><span class="section-num">06</span> In-App Purchases, Billing & Subscriptions</h2>
+        <p>All in-app purchases (including coin packs and VIP subscription tiers) are billed through the respective payment platform (Apple App Store or Google Play Store) and are governed by the payment terms of those respective platforms:</p>
+        <ul>
+          <li><strong>Subscription Billing & Renewal:</strong> Subscriptions automatically renew at the specified cycle rate (e.g., monthly or yearly) unless auto-renew is cancelled at least 24 hours before the end of the current billing period in your Apple ID or Google Play account settings.</li>
+          <li><strong>Refund Inquiries:</strong> Because billing is managed directly by Apple or Google, all refund requests must be directed to Apple or Google customer support in accordance with their established policies.</li>
+          <li><strong>Price Modifications:</strong> We reserve the right to modify pricing or perks for in-app items and subscriptions at any time with advance notice where required.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2><span class="section-num">07</span> Prohibited Conduct & Community Standards</h2>
+        <p>You agree not to engage in any of the following prohibited behaviors on Vizura:</p>
+        <ul>
+          <li>Publishing content that is illegal, defamatory, harassing, sexually explicit, abusive, or promoting hate speech.</li>
+          <li>Uploading copyrighted material without explicit permission from the rights holder.</li>
+          <li>Employing bots, scrapers, automated scripts, or exploits to manipulate the platform or virtual economy.</li>
+          <li>Reverse-engineering, decompiling, or attempting to compromise the security or integrity of our mobile client or backend infrastructure.</li>
+          <li>Impersonating another person, creator, or entity.</li>
+        </ul>
+        <p>Violations of community standards may result in immediate content removal, account suspension, or permanent account revocation without refund.</p>
+      </section>
+
+      <!-- DIGITAL WELL-BEING & COMPULSIVE USAGE WARNING -->
+      <section class="section">
+        <h2><span class="section-num">08</span> Digital Well-Being, Compulsive Usage Advisory & Health Warning</h2>
+        <div class="alert-box gold">
+          <div class="alert-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+            Health & Screen Time Advisory
+          </div>
+          <p style="color: #cbd5e1; margin-bottom: 0;">Interactive social media, feeds, and multimedia can be stimulating and habit-forming. You acknowledge that you are solely responsible for monitoring, regulating, and limiting your own time spent on Vizura.</p>
+        </div>
+        <ul>
+          <li><strong>Personal Responsibility for Screen Time:</strong> You recognize that prolonged, continuous device use can contribute to visual strain, repetitive physical fatigue, disrupted sleep cycles, and behavioral dependency. You agree to utilize the app moderately, take regular physical breaks, and heed all device-level health advisories.</li>
+          <li><strong>Parental Supervision & Minor Protection:</strong> Parents and legal guardians are strictly responsible for monitoring minor screen time and behavioral habits. We strongly encourage parents to configure device operating system parental controls (e.g., Apple Screen Time, Google Family Link) to establish daily access schedules and enforce spending limits.</li>
+          <li><strong>Built-In Well-Being Features:</strong> Vizura provides user-configurable controls within Settings—including Quiet Mode, scheduled notification blackouts, and account management tools—to assist you in maintaining balanced digital habits.</li>
+          <li><strong>Assumption of Risk & Express Mental Health Waiver:</strong> Vizura is an entertainment and social media platform provided for personal, self-directed enjoyment. To the maximum extent permitted by applicable law, you expressly assume all risks related to excessive usage and agree that Vizura, its owners, and operators shall not be liable for any claims relating to compulsive behavior, habituation, screen-time addiction, sleep disruption, emotional distress, or psychological impact arising from your voluntary use of the application.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2><span class="section-num">09</span> Digital Millennium Copyright Act (DMCA) Notices</h2>
+        <p>Vizura respects the intellectual property rights of creators. If you believe your copyrighted work has been copied or displayed on Vizura in a manner that constitutes infringement, please submit a written DMCA takedown notice to our designated copyright agent at <a href="mailto:info@vizura.app"><strong>info@vizura.app</strong></a> containing:</p>
+        <ul>
+          <li>Identification of the copyrighted work claimed to have been infringed.</li>
+          <li>Direct link or specific identification of the infringing material on Vizura.</li>
+          <li>Your contact information (name, address, telephone number, and email).</li>
+          <li>A statement made in good faith that the disputed use is not authorized by the copyright owner, its agent, or the law.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2><span class="section-num">10</span> Disclaimer of Warranties</h2>
+        <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, VIZURA IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED, SECURE, ACCURATE, OR ERROR-FREE.</p>
+      </section>
+
+      <section class="section">
+        <h2><span class="section-num">11</span> Limitation of Liability</h2>
+        <p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL VIZURA, ITS DIRECTORS, EMPLOYEES, AFFILIATES, OR PARTNERS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES ARISING OUT OF OR IN CONNECTION WITH YOUR ACCESS TO OR INABILITY TO USE THE SERVICE.</p>
+      </section>
+
+      <section class="section">
+        <h2><span class="section-num">12</span> Governing Law & Dispute Resolution</h2>
+        <p>These Terms and any dispute arising from your use of Vizura shall be governed by and construed in accordance with the laws of the applicable jurisdiction, without regard to conflict of law principles. Any dispute that cannot be resolved amicably shall be submitted to confidential, binding arbitration on an individual basis.</p>
+      </section>
+
+      <div class="contact-card">
+        <h2 style="margin-bottom: 6px;">Legal, Copyright & Account Notices</h2>
+        <p style="margin-bottom: 10px;">For all legal questions, terms inquiries, DMCA notices, or account deletion requests, reach out directly to our legal team:</p>
+        <a href="mailto:info@vizura.app" class="email-chip">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@vizura.app
+        </a>
+      </div>
+
+    </div>
+
+    <footer class="footer">
+      <p>&copy; 2026 Vizura. All rights reserved. • <a href="privacy.html">Privacy Policy</a> • <a href="terms.html">Terms of Service</a></p>
+    </footer>
+
+  </main>
+
+</body>
+</html>
