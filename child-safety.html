@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Child Safety Standards (CSAE Policy) - Vizura</title>
+  <meta name="description" content="Official Child Safety Standards and zero-tolerance policy against Child Sexual Abuse and Exploitation (CSAE) and CSAM for the Vizura application.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07050e;
+      --card-bg: rgba(20, 14, 38, 0.8);
+      --card-border: rgba(123, 97, 255, 0.25);
+      --accent: #7b61ff;
+      --accent-glow: rgba(123, 97, 255, 0.35);
+      --accent-rose: #f43f5e;
+      --accent-emerald: #10b981;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      background-image:
+        radial-gradient(circle at 15% 10%, rgba(123, 97, 255, 0.14) 0%, transparent 40%),
+        radial-gradient(circle at 85% 55%, rgba(244, 63, 94, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 50% 90%, rgba(16, 185, 129, 0.06) 0%, transparent 50%);
+      background-attachment: fixed;
+      color: var(--text);
+      line-height: 1.75;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    .nav-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(7, 5, 14, 0.8);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 16px 24px;
+    }
+    .nav-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .brand {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.35rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+    .brand-glow {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 16px var(--accent);
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .nav-tab {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+    }
+    .nav-tab:hover {
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+    .nav-tab.active {
+      color: #fff;
+      background: rgba(244, 63, 94, 0.16);
+      border-color: rgba(244, 63, 94, 0.45);
+    }
+    .page-container {
+      max-width: 900px;
+      margin: 40px auto 80px;
+      padding: 0 24px;
+    }
+    .header-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 40px;
+      margin-bottom: 32px;
+      backdrop-filter: blur(16px);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+    }
+    .header-card::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(244, 63, 94, 0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #fda4af;
+      background: rgba(244, 63, 94, 0.14);
+      border: 1px solid rgba(244, 63, 94, 0.38);
+      padding: 4px 12px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+      line-height: 1.15;
+    }
+    .meta-line {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .content-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 24px;
+      padding: 40px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+    .section {
+      margin-bottom: 36px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .section:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-num {
+      color: #fda4af;
+      font-size: 1rem;
+      font-weight: 800;
+    }
+    h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      margin: 18px 0 8px;
+    }
+    p {
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      font-size: 0.98rem;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 14px 0;
+    }
+    li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 10px;
+      color: var(--text-muted);
+      font-size: 0.96rem;
+    }
+    li::before {
+      content: '▹';
+      position: absolute;
+      left: 4px;
+      color: #fda4af;
+      font-weight: 700;
+    }
+    strong {
+      color: #fff;
+      font-weight: 600;
+    }
+    .alert-box {
+      background: rgba(244, 63, 94, 0.09);
+      border: 1px solid rgba(244, 63, 94, 0.38);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+    .alert-box.emerald {
+      background: rgba(16, 185, 129, 0.08);
+      border-color: rgba(16, 185, 129, 0.35);
+    }
+    .alert-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      color: #fda4af;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.05rem;
+    }
+    .alert-box.emerald .alert-title {
+      color: #6ee7b7;
+    }
+    .contact-card {
+      background: linear-gradient(135deg, rgba(244, 63, 94, 0.14) 0%, rgba(20, 14, 38, 0.92) 100%);
+      border: 1px solid rgba(244, 63, 94, 0.38);
+      border-radius: 20px;
+      padding: 28px;
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    a {
+      color: #bfaaff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+    }
+    a:hover {
+      color: #fff;
+    }
+    .email-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 10px 18px;
+      border-radius: 12px;
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      width: fit-content;
+      margin-top: 6px;
+    }
+    .footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-bar">
+    <div class="nav-content">
+      <a href="https://vizura.app" class="brand">
+        <span class="brand-glow"></span>
+        VIZURA
+      </a>
+      <div class="nav-links">
+        <a href="privacy.html" class="nav-tab">Privacy Policy</a>
+        <a href="terms.html" class="nav-tab">Terms of Service</a>
+        <a href="child-safety.html" class="nav-tab active">Child Safety Standards</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-container">
+
+    <div class="header-card">
+      <div class="badge">Zero-Tolerance Safety Policy</div>
+      <h1>Child Safety Standards &amp; CSAE Policy</h1>
+      <div class="meta-line">
+        <span><strong>Application:</strong> Vizura (Google Play &amp; Web)</span>
+        <span>•</span>
+        <span><strong>Effective Date:</strong> November 2026</span>
+        <span>•</span>
+        <span><strong>Child Safety Contact:</strong> info@vizura.app</span>
+      </div>
+    </div>
+
+    <div class="content-card">
+
+      <section class="section">
+        <h2><span class="section-num">01</span> Zero-Tolerance Commitment Against CSAE &amp; CSAM</h2>
+        <div class="alert-box">
+          <div class="alert-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Strict Prohibition of Child Sexual Abuse and Exploitation (CSAE)
+          </div>
+          <p style="color: #e2e8f0; margin-bottom: 0;"><strong>Vizura</strong> maintains an absolute, zero-tolerance policy against <strong>Child Sexual Abuse and Exploitation (CSAE)</strong> and <strong>Child Sexual Abuse Material (CSAM)</strong>. Any content, account, message, or behavior that exploits, abuses, endangers, or sexualizes minors (individuals under the age of 18) is strictly prohibited across all Vizura mobile and web services.</p>
+        </div>
+        <p>These Child Safety Standards apply globally to every user, creator, and visitor of the <strong>Vizura</strong> mobile application (available on Google Play and iOS) and the Vizura web platform (<strong>vizura.app</strong>). Violations result in immediate content removal, permanent account termination, device/IP blocking, and mandatory reporting to relevant legal authorities.</p>
+      </section>
+
+      <section class="section">
+        <h2><span class="section-num">02</span> Explicitly Prohibited Content &amp; Conduct</h2>
+        <p>Vizura strictly prohibits the creation, uploading, sharing, solicitation, storage, or distribution of any of the following across feeds, Vibes, Vids, Pics, Boards, profiles, comments, or direct messages:</p>
+        <ul>
+          <li><strong>Child Sexual Abuse Material (CSAM):</strong> Any visual depiction—including photographs, videos, illustrations, AI-generated or digitally altered imagery, or audio—of sexually explicit conduct involving anyone under 18 years of age.</li>
+          <li><strong>Child Sexual Exploitation and Abuse (CSAE):</strong> Grooming, sextortion, sexual solicitation, coercion, trafficking, or any predatory interaction directed toward a minor.</li>
+          <li><strong>Sexualization of Minors:</strong> Content that sexualizes, objectifies, or fetishizes minors, including suggestive captions, hashtags, or roleplay involving minors.</li>
+          <li><strong>Facilitating or Linking to Abuse:</strong> Sharing external links, invites, contact details, or coded language intended to direct users to off-platform CSAM or CSAE networks.</li>
+          <li><strong>Child Endangerment:</strong> Content encouraging self-harm, physical abuse, bullying, or dangerous behavior targeting children or teens.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2><span class="section-num">03</span> Age Eligibility &amp; Minor Protection</h2>
+        <ul>
+          <li><strong>Minimum Age Requirement:</strong> Vizura is intended strictly for users aged <strong>13 years and older</strong> (or 16 where required by regional law, such as under GDPR). Accounts suspected of belonging to children under the minimum age are immediately suspended and purged.</li>
+          <li><strong>Privacy &amp; Safety Controls:</strong> Users can block abusive accounts, control direct messaging interactions, mute accounts, and delete their accounts and personal data permanently at any time inside <strong>Profile &rarr; Settings &rarr; Account &amp; Security</strong>.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2><span class="section-num">04</span> In-App User Reporting &amp; Feedback Mechanism</h2>
+        <div class="alert-box emerald">
+          <div class="alert-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+            How to Report Safety Concerns Directly in Vizura
+          </div>
+          <p style="color: #e2e8f0; margin-bottom: 0;">Every post, Vibe, Vid, comment, direct message, and user profile inside the Vizura app includes an accessible <strong>Report</strong> action so community members can flag suspected CSAE, CSAM, or child safety concerns immediately.</p>
+        </div>
+        <ul>
+          <li><strong>Report a Post, Vibe, or Video:</strong> Tap the options menu (<strong>•••</strong>) on any post or video and select <strong>Report</strong>, then choose the safety/abuse reason. Flagged items are prioritized for urgent Trust &amp; Safety review.</li>
+          <li><strong>Report a User or Direct Message:</strong> Open the user's profile or chat thread, tap the options menu, and select <strong>Report</strong> or <strong>Block</strong> to immediately sever contact and alert our moderation team.</li>
+          <li><strong>Direct Escalation by Email:</strong> Anyone—including non-users, parents, guardians, and law enforcement—may report suspected child safety issues directly to our dedicated Child Safety Point of Contact at <a href="mailto:info@vizura.app"><strong>info@vizura.app</strong></a> with the subject line <strong>"URGENT: Child Safety Report"</strong>.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2><span class="section-num">05</span> Enforcement, Moderation &amp; Removal</h2>
+        <p>When Vizura obtains actual knowledge of suspected CSAM or CSAE—whether through in-app user reports, email escalations, or automated/manual safety reviews—our Trust &amp; Safety team takes swift, decisive action:</p>
+        <ul>
+          <li><strong>Immediate Content Removal:</strong> Confirmed or suspected CSAM/CSAE material is immediately taken offline and removed from public and private feeds.</li>
+          <li><strong>Permanent Account Termination:</strong> Accounts involved in producing, distributing, soliciting, or facilitating CSAE or CSAM are permanently banned without notice or appeal, and associated identifiers are blocked from re-registering.</li>
+          <li><strong>Evidence Preservation:</strong> Relevant account records and metadata are securely preserved strictly as required by law for official law enforcement investigations.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2><span class="section-num">06</span> Compliance with Child Safety Laws &amp; Law Enforcement Reporting</h2>
+        <p>Vizura complies with all applicable international, federal, and regional child safety laws and regulations, including 18 U.S.C. &sect; 2258A and Google Play's Child Safety Standards Policy.</p>
+        <ul>
+          <li><strong>Mandatory Reporting to NCMEC &amp; Authorities:</strong> Confirmed instances of CSAM or apparent CSAE are reported promptly to the <strong>National Center for Missing &amp; Exploited Children (NCMEC) CyberTipline</strong> and/or appropriate regional and national law enforcement agencies.</li>
+          <li><strong>Cooperation with Investigations:</strong> Vizura cooperates fully with authorized law enforcement requests and child protection organizations to protect minors and support investigations.</li>
+        </ul>
+      </section>
+
+      <div class="contact-card">
+        <h2 style="margin-bottom: 6px;">Child Safety Point of Contact</h2>
+        <p style="margin-bottom: 10px;">Vizura has designated a dedicated Child Safety Point of Contact authorized to review, escalate, and act on child safety compliance inquiries, Google Play policy notices, user safety reports, and law enforcement requests.</p>
+        <p style="margin-bottom: 6px;"><strong>Team:</strong> Vizura Trust &amp; Safety / Child Safety Compliance Officer<br>
+        <strong>App / Service:</strong> Vizura (<code>com.vizura.app</code> / <code>vizura.app</code>)</p>
+        <a href="mailto:info@vizura.app?subject=Child%20Safety%20Inquiry%20-%20Vizura" class="email-chip">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@vizura.app
+        </a>
+      </div>
+
+    </div>
+
+    <footer class="footer">
+      <p>&copy; 2026 Vizura. All rights reserved. • <a href="privacy.html">Privacy Policy</a> • <a href="terms.html">Terms of Service</a> • <a href="child-safety.html">Child Safety Standards</a></p>
+    </footer>
+
+  </main>
+
+</body>
+</html>
